@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | 3-column preview card component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- H1 and Theme switcher -->
+  <header>
+    <h1 class="sr-only">Frontend Mentor | 3-column preview card component</h1>
+    <button class="theme-switcher" aria-label="theme switcher">
+      <img class="theme-icon" src="images/icon-moon.png" alt="">
+      <img class="theme-icon hidden" src="images/icon-sun.png" alt="">
+    </button>
+  </header>
+
+  <!-- Cards -->
+  <main class="container">
+    <div class="card">
+      <img src="images/icon-sedans.svg" alt="">
+      <h2 class="type">Sedans</h2>
+      <p class="description">
+        Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+        or on your next road trip.
+      </p>
+      <a href="#" aria-label="Learn more about sedans">Learn More</a>
+    </div>
+
+    <div class="card">
+      <img src="images/icon-suvs.svg" alt="">
+      <h2 class="type">SUVs</h2>
+      <p class="description">
+        Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+        and off-road adventures.
+      </p>
+      <a href="#" aria-label="Learn more about SUVS">Learn More</a>
+    </div>
+
+    <div class="card">
+      <img src="images/icon-luxury.svg" alt="">
+      <h2 class="type">Luxury</h2>
+      <p class="description">
+        Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+        rental and arrive in style.
+      </p>
+      <a href="#" aria-label="Learn more about luxury cars">Learn More</a>
+    </div>
+  </main>
+
+  <!-- Attribution -->
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/fernandolapaz">Fernando</a>.
+  </footer>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>

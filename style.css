@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --clr-primary-1: hsl(31, 77%, 52%);
+    --clr-primary-2: hsl(184, 100%, 22%);
+    --clr-primary-3: hsl(179, 100%, 13%);
+    --clr-neutral-1: hsl(0, 0%, 95%);
+    --clr-neutral-tr: hsla(0, 0%, 100%, 0.75);
+    --clr-neutral-2: hsl(0, 0%, 10%);
+    --clr-attribution: hsl(228, 45%, 44%);
+
+    --ff-base: 'Lexend Deca', sans-serif;
+    --ff-cursive: 'Big Shoulders Display', cursive;
+
+    --fs: 0.94rem;
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+picture,
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1;
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    background-color: var(--clr-neutral-1);
+    padding: 6.5vw;
+}
+
+/* MAIN (CARDS) */
+.container {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    min-width: 12.5rem;
+}
+
+.card {
+    display: grid;
+    gap: 1rem;
+    padding: 3rem;
+    font-family: var(--ff-base);
+    font-size: var(--fs);
+}
+
+.card:nth-child(1) {
+    background-color: var(--clr-primary-1);
+}
+
+.card:nth-child(2) {
+    background-color: var(--clr-primary-2);
+}
+
+.card:nth-child(3) {
+    background-color: var(--clr-primary-3);
+}
+
+.type {
+    text-transform: uppercase;
+    font-family: var(--ff-cursive);
+    font-size: 2.5rem;
+    color: var(--clr-neutral-1);
+    margin-top: 1.45rem;
+}
+
+.description {
+    color: var(--clr-neutral-tr);
+    line-height: 1.65;
+    margin-top: 0.9rem;
+}
+
+.card a {
+    text-decoration: none;
+    background-color: var(--clr-neutral-1);
+    border: 2px solid var(--clr-neutral-1);
+    justify-self: left;
+    padding: 0.9rem 1.85rem;
+    border-radius: 1.5rem;
+    margin-top: 0.5rem;
+    color: var(--clr-neutral-2);
+    mix-blend-mode: screen;
+}
+
+.card a:hover,
+.card a:focus-visible {
+    background-color: transparent;
+    color: var(--clr-neutral-tr);
+    transition: 0.3s;
+}
+
+/* Desktop */
+@media screen and (min-width: 46.5rem) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 57.5rem;
+        margin-top: 2.65rem;
+    }
+
+    .card a {
+        margin-top: 4.15rem;
+    }
+}
+
+/* FOOTER */
+.attribution {
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--clr-neutral-2);
+}
+
+.attribution a {
+    color: var(--clr-attribution);
+}
+
+@media screen and (min-width: 46.5rem) and (min-height: 45rem) {
+    .attribution {
+        position: fixed;
+        bottom: 1rem;
+        justify-self: center;
+    }
+}
+
+/* HEADER */
+header {
+    text-align: center;
+}
+
+.sr-only {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* Theme switcher */
+.dark-mode {
+    --clr-primary-1: hsl(31, 77%, 52%);
+    --clr-primary-2: hsl(184, 100%, 32%);
+    --clr-primary-3: hsl(179, 100%, 23%);
+    --clr-neutral-1: hsl(0, 0%, 10%);
+    --clr-neutral-2: hsl(0, 0%, 90%);
+    --clr-attribution: hsl(228, 45%, 74%);
+}
+
+@media screen and (min-width: 46.5rem) and (min-height: 45rem) {
+    header {
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+    }
+}
+
+.theme-switcher {
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
